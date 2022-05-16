@@ -1,24 +1,39 @@
+import React from "react";
 import './App.css';
-import List from'./Components/List.js';
-import FavoritesList from'./Components/FavoritesList.js';
-
-//Standard import
-import {Route, Link, Routes} from "react-router-dom"
+import Home from'./Components/Home.js';
+import Favorites from'./Components/Favorites.js';
+//I probably need this
+import { useState, useEffect } from "react";
+import {Route, Link, Routes, Navigate} from "react-router-dom"
 
 function App() {
+
+  const [resourcesListArray, setResourcesListArray] = useState ([]);
+
+  useEffect( () => {
+    fetch('https://sheets.googleapis.com/v4/spreadsheets/15fQuHfQCK_u-QWUcyqMSqqOl5p5JBR2C77wbMsC7WPk/values/Sheet1!A:I?key=AIzaSyBVj83yAUwYu60Co4bVIRgZca6lWV5xR2g')
+    .then((res) => {
+        return res.json();
+    })
+    .then((data) => {
+        setResourcesListArray(data.values)
+    })
+  },[])
+
   return (
     <div className="App">
       
       <nav>
         <ul>
           <li><Link to='/Home'>Home</Link></li>
-          <li><Link to='/Favorites'>Tracked Resources</Link></li>
+          <li><Link to='/Favorites'>Favorites</Link></li>
         </ul>
       </nav>
       <main>
         <Routes>
-          <Route path='/Home' element={<List />} />
-          <Route path='/Favorites' element={<FavoritesList />} />
+          <Route path='/Home' element={<Home resourcesListArray={resourcesListArray}/>} />
+          <Route path='/Favorites' element={<Favorites />} />
+          <Route path='/' element={<Navigate to='/Home' />} />
         </Routes>
       </main>
 

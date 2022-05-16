@@ -1,10 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+* {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
 ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  text-align: center;
+  justify-content: space-evenly;
 }
+/* li {
+  gap: 50px;
+} */
 a {
   text-decoration: none;
 }
 a:hover { text-decoration: underline; }
+
+h1 {
+  text-align: center;
+}
