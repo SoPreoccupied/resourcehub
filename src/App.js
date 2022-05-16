@@ -1,10 +1,10 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Home from'./Components/Home.js';
 import Favorites from'./Components/Favorites.js';
-//I probably need this
 import { useState, useEffect } from "react";
-import {Route, Link, Routes, Navigate} from "react-router-dom"
+import {Route, Link, Routes, Navigate} from "react-router-dom";
 
 function App() {
 

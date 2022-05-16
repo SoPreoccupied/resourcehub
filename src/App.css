@@ -8,16 +8,19 @@ ul {
   display: flex;
   flex-direction: row;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
-/* li {
-  gap: 50px;
-} */
+ul li {
+  margin: 16px;
+}
+
 a {
   text-decoration: none;
+  color: 	#daa520;
 }
 a:hover { text-decoration: underline; }
 
 h1 {
   text-align: center;
+  color: rgba(219, 20, 60)
 }
