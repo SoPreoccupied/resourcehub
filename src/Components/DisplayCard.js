@@ -1,18 +1,20 @@
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button';
+import {Navigate} from "react-router-dom";
 
+//Display card with Topic, Description, Website(for now); Indexes 3,4,5(for now) in resourcesListArray
 const DisplayCard = (props) => {
     return (
         <div>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
+            <Card border="warning" style={{ width: '18rem' }}>
+                <Card.Img variant="top" src="" />
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
-                    </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Card.Title>{props.topic}</Card.Title>
+                    <Card.Text>{props.description}</Card.Text>
+                    <Card.Text>{props.website}</Card.Text>
+                    <Button onClick={ () => {
+                    window.open(props.website,"_blank")
+                    }} variant="secondary">Go</Button>
                 </Card.Body>
             </Card>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+//Have bootstap before App.css
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Home from'./Components/Home.js';
@@ -8,8 +9,8 @@ import {Route, Link, Routes, Navigate} from "react-router-dom";
 
 function App() {
 
+  //Connecting google sheets API data to app.js
   const [resourcesListArray, setResourcesListArray] = useState ([]);
-
   useEffect( () => {
     fetch('https://sheets.googleapis.com/v4/spreadsheets/15fQuHfQCK_u-QWUcyqMSqqOl5p5JBR2C77wbMsC7WPk/values/Sheet1!A:I?key=AIzaSyBVj83yAUwYu60Co4bVIRgZca6lWV5xR2g')
     .then((res) => {

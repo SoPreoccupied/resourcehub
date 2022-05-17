@@ -1,13 +1,20 @@
 //This will be the home page
+
 import DisplayCard from "./DisplayCard";
 
-//map over rsouces list arroy for every map return display card configerued to arrays ietem)
+//For every item, return display card 
+//Map over Topic, Description, Website(for now); Indexes 3,4,5(for now) in resourcesListArray
 const Home = (props) => {
-    console.log(props.resourcesListArray);
+    const displayCardList = props.resourcesListArray.map( (value, index) => {
+        return <DisplayCard topic={value[3]} description={value[4]} website={value[5]}/>
+    })
+    
     return (
         <div>
-            <h1>Where in the web are my Resources?</h1>
-            <DisplayCard />
+            <h1>Where in the web are our Resources?</h1>
+            <section id="Card">
+            {displayCardList}
+            </section>
         </div>
 
     )
