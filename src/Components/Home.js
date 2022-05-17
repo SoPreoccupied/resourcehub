@@ -12,7 +12,7 @@ const Home = (props) => {
     return (
         <div>
             <h1>Where in the web are our Resources?</h1>
-            <section id="Card">
+            <section id="Cards">
             {displayCardList}
             </section>
         </div>

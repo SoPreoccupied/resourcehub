@@ -18,9 +18,33 @@ a {
   text-decoration: none;
   color: 	#daa520;
 }
-a:hover { text-decoration: underline; }
+a:hover { 
+  text-decoration: underline;
+  color: white;
+}
 
 h1 {
   text-align: center;
   color: rgba(219, 20, 60)
 }
+#Cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#Card {
+  margin: 16px auto;
+}
+
+
+/* On Desk-top, slide sideways maybe */
+
+/* #Cards {
+  display: flex;
+  flex-direction: wrap;
+  text-align: center; 
+  justify-content: center;
+} */
+
