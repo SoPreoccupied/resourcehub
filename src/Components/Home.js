@@ -6,7 +6,10 @@ import DisplayCard from "./DisplayCard";
 //Map over Topic, Description, Website(for now); Indexes 3,4,5(for now) in resourcesListArray
 const Home = (props) => {
     const displayCardList = props.resourcesListArray.map( (value, index) => {
-        return <DisplayCard topic={value[3]} description={value[4]} website={value[5]}/>
+        if(index === 0) {
+            return;
+        }
+        return <DisplayCard cardIndex={index} handleButtonClick={props.addFavorite} buttonText="Add" topic={value[3]} description={value[4]} website={value[5]}/>
     })
     
     return (

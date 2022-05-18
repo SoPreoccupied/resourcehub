@@ -1,6 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Orbitron&display=swap');
 * {
   font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+  background: black;
+}
+
+.App {
+  background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672");
+  background-attachment: fixed;
+  min-height: 100vh;
+  background-size: cover;
 }
 
 ul {
@@ -10,22 +21,30 @@ ul {
   text-align: center;
   justify-content: center;
 }
+
 ul li {
   margin: 16px;
 }
 
 a {
+  letter-spacing: 4px;
+  font-family: 'Orbitron', sans-serif;
   text-decoration: none;
   color: 	#daa520;
+  text-shadow: 1px 1px #000;
 }
 a:hover { 
   text-decoration: underline;
-  color: white;
+  color: rgba(219, 20, 60);
 }
 
 h1 {
+  letter-spacing: 4px;
+  font-family: 'Orbitron', sans-serif;
   text-align: center;
-  color: rgba(219, 20, 60)
+  color: rgba(219, 20, 60);
+  text-shadow: 1px 1px #000;
+  margin: 1em;
 }
 #Cards {
   display: flex;
@@ -34,17 +53,23 @@ h1 {
   justify-content: space-evenly;
 }
 
-#Card {
+#displayCard {
   margin: 16px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
 }
 
+.card-body {
+  backdrop-filter: blur(5px);
+  color: white;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px #000;
+}
 
-/* On Desk-top, slide sideways maybe */
-
-/* #Cards {
-  display: flex;
-  flex-direction: wrap;
-  text-align: center; 
-  justify-content: center;
-} */
+.card {
+  background-color: transparent;
+}
 

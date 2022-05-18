@@ -4,16 +4,17 @@ import Button from 'react-bootstrap/Button';
 //Display card with Topic, Description, Website(for now); Indexes 3,4,5(for now) in resourcesListArray
 const DisplayCard = (props) => {
     return (
-        <div id="Card">
+        <div id="displayCard">
             <Card border="warning" style={{ width: '18rem' }}>
-                <Card.Img variant="top" />
                 <Card.Body>
                     <Card.Title>{props.topic}</Card.Title>
                     <Card.Text>{props.description}</Card.Text>
-                    <Card.Text>{props.website}</Card.Text>
+                    <Card.Text><a href={props.website} target="_blank">{props.website}</a></Card.Text>
+                    {/* Add Button */}
                     <Button onClick={ () => {
-                    window.open(props.website,"_blank")
-                    }} variant="secondary">Go</Button>
+                        props.handleButtonClick(props.cardIndex)
+                    }}variant="warning">{props.buttonText}</Button>
+                
                 </Card.Body>
             </Card>
         </div>
