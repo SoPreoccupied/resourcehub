@@ -87,6 +87,15 @@ h1 {
   text-shadow: 1px 1px #000;
 }
 
+p {
+  text-align: center;
+  color: white;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px #000;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+}
+
 /* May change later; Styling for SearchBar */
 /* #searchBar {
   color: 	#daa520;

@@ -2,9 +2,11 @@ import React from "react";
 //Have bootstap before App.css
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Home from'./Components/Home.js';
-import Favorites from'./Components/Favorites.js';
-import Contact from'./Components/Contact.js';
+import Home from './Components/Home.js';
+import Favorites from './Components/Favorites.js';
+import Contact from './Components/Contact.js';
+import About from './Components/About.js';
+// import SearchBar from'./Components/SearchBar.js';
 import { useState, useEffect } from "react";
 import {Route, Link, Routes, Navigate} from "react-router-dom";
 
@@ -44,6 +46,7 @@ function App() {
         <ul>
           <li><Link to='/Home'>Home</Link></li>
           <li><Link to='/Favorites'>Favorites</Link></li>
+          <li><Link to='/About'>About</Link></li>
           <li><Link to='/Contact'>Contact</Link></li>
         </ul>
       </nav>
@@ -53,6 +56,7 @@ function App() {
           <Route path='/' element={<Navigate to='/Home' />} />
           <Route path='/Favorites' element={<Favorites removeFavorite={handleRemoveFavorite} resourcesListArray={resourcesListArray} favoritesArray={Array.from(favoritesArraySet)}/>} />
           <Route path='/Contact' element={<Contact />} />
+          <Route path='/About' element={<About />} />
         </Routes>
       </main>
       
