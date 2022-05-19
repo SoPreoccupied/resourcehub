@@ -19,6 +19,7 @@ ul {
   display: flex;
   flex-direction: row;
   text-align: center;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -46,6 +47,7 @@ h1 {
   text-shadow: 1px 1px #000;
   margin: 1em;
 }
+
 #Cards {
   display: flex;
   flex-direction: row;
@@ -72,4 +74,3 @@ h1 {
 .card {
   background-color: transparent;
 }
-

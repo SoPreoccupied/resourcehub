@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 const DisplayCard = (props) => {
     return (
         <div id="displayCard">
+
             <Card border="warning" style={{ width: '18rem' }}>
                 <Card.Body>
                     <Card.Title>{props.topic}</Card.Title>
@@ -14,11 +15,10 @@ const DisplayCard = (props) => {
                     <Button onClick={ () => {
                         props.handleButtonClick(props.cardIndex)
                     }}variant="warning">{props.buttonText}</Button>
-                
                 </Card.Body>
             </Card>
+            
         </div>
-
     )
 }
 

@@ -1,6 +1,5 @@
 //This will be the favorites page
 
-import { useState } from "react";
 import DisplayCard from "./DisplayCard";
 
 const Favorites = (props) => {
@@ -12,7 +11,7 @@ const Favorites = (props) => {
 
     return (
         <div>
-            <h1>Tracked Resources</h1>
+            <h1>Tracked Resources.</h1>
             {componentsList}
         </div>
     )

@@ -1,7 +1,10 @@
-const FavoritesList = (props) => {
-    return (
-        <h1>favorites list component</h1>
-    )
-};
+//Probably do not need
 
-export default FavoritesList;
+
+// const FavoritesList = (props) => {
+//     return (
+//         <h1>favorites list component</h1>
+//     )
+// };
+
+// export default FavoritesList;
