@@ -1,12 +1,20 @@
+/* Mobile first design, but works well on all screens */
+
+
+/* Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Orbitron&display=swap');
+
+/* Font for dyslexia, shows up for all text except links and title */
 * {
   font-family: 'Lexend Deca', sans-serif;
 }
 
+/* Makes side scroll have smooth transition in dark mode */
 body {
   background: black;
 }
 
+/* Background Image to cover whole of every page */
 .App {
   background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672");
   background-attachment: fixed;
@@ -14,6 +22,7 @@ body {
   background-size: cover;
 }
 
+/* Styling for listed links */
 ul {
   list-style-type: none;
   display: flex;
@@ -23,10 +32,12 @@ ul {
   justify-content: center;
 }
 
+/* Adds space between list items */
 ul li {
   margin: 16px;
 }
 
+/* Styling for all links */
 a {
   letter-spacing: 4px;
   font-family: 'Orbitron', sans-serif;
@@ -34,11 +45,14 @@ a {
   color: 	#daa520;
   text-shadow: 1px 1px #000;
 }
+
+/* Change link styling on hover */
 a:hover { 
   text-decoration: underline;
   color: rgba(219, 20, 60);
 }
 
+/* Title: Where in the web are our Resources? */
 h1 {
   letter-spacing: 4px;
   font-family: 'Orbitron', sans-serif;
@@ -47,39 +61,33 @@ h1 {
   text-shadow: 1px 1px #000;
   margin: 1em;
 }
-/* The id of cards here mirrors the id of favoritedCards. */
-#cards {
+/* Gives IDs of cards and favorited cards same flexbox conditions */
+#cards, #favoritedCards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-#favoritedCards{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-
-/* This allows the cards to appear as the same length and width */
+/* Needs own flexbox so all cards are the same length and width */
 #displayCard {
   margin: 16px auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-
 }
 
-.card-body {
+/* Customize bootstrap cards template */
+.card {
+  background-color: transparent;
   backdrop-filter: blur(5px);
   color: white;
   letter-spacing: 2px;
   text-shadow: 1px 1px #000;
 }
 
-.card {
-  background-color: transparent;
-}
+/* May change later; Styling for SearchBar */
+/* #searchBar {
+  color: 	#daa520;
+} */

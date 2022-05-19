@@ -14,12 +14,13 @@ const Home = (props) => {
     
     return (
         <div>
+            
             <h1>Where in the web are our Resources?</h1>
             <section id="cards">
             {displayCardList}
             </section>
-        </div>
 
+        </div>
     )
 }
 

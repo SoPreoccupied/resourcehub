@@ -3,6 +3,7 @@
 import DisplayCard from "./DisplayCard";
 
 const Favorites = (props) => {
+    //Do I still need this console log? Also, do I need a reference to index, favoritesArrayCopy?
     console.log(props);
     const componentsList = props.favoritesArray.map((value, index, favoritesArrayCopy) => {
         const tableRow = props.resourcesListArray[value]
@@ -11,10 +12,12 @@ const Favorites = (props) => {
 
     return (
         <div>
+
             <h1>Tracked Resources.</h1>
             <section id="favoritedCards">
             {componentsList}
             </section>
+
         </div>
     )
 }
