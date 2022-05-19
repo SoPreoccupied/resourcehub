@@ -33,9 +33,9 @@ function App() {
 
   const handleRemoveFavorite =(favoritesIndex) => {
     const newSet = new Set([...Array.from(favoritesArraySet)]);
-    console.log(newSet);
+    // console.log(newSet);
     newSet.delete(favoritesIndex);
-    console.log(newSet);
+    // console.log(newSet);
     setFavoritesArraySet(newSet);
   }
 
