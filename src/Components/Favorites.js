@@ -1,4 +1,4 @@
-//This will be the favorites page
+//This is the favorites page
 
 import DisplayCard from "./DisplayCard";
 
@@ -12,7 +12,9 @@ const Favorites = (props) => {
     return (
         <div>
             <h1>Tracked Resources.</h1>
+            <section id="favoritedCards">
             {componentsList}
+            </section>
         </div>
     )
 }

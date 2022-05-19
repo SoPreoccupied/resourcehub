@@ -47,14 +47,23 @@ h1 {
   text-shadow: 1px 1px #000;
   margin: 1em;
 }
-
-#Cards {
+/* The id of cards here mirrors the id of favoritedCards. */
+#cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
+#favoritedCards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+
+/* This allows the cards to appear as the same length and width */
 #displayCard {
   margin: 16px auto;
   display: flex;

@@ -37,10 +37,9 @@ function App() {
     setFavoritesArraySet(newSet);
   }
 
-
   return (
     <div className="App">
-      
+
       <nav>
         <ul>
           <li><Link to='/Home'>Home</Link></li>
@@ -57,7 +56,6 @@ function App() {
         </Routes>
       </main>
       
-
     </div>
   );
 }

@@ -1,4 +1,4 @@
-//This will be the home page
+//This is the home page
 
 import DisplayCard from "./DisplayCard";
 
@@ -15,7 +15,7 @@ const Home = (props) => {
     return (
         <div>
             <h1>Where in the web are our Resources?</h1>
-            <section id="Cards">
+            <section id="cards">
             {displayCardList}
             </section>
         </div>

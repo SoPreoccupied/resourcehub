@@ -1,3 +1,5 @@
+//This page displays our reasources as cards
+
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button';
 
@@ -17,7 +19,7 @@ const DisplayCard = (props) => {
                     }}variant="warning">{props.buttonText}</Button>
                 </Card.Body>
             </Card>
-            
+
         </div>
     )
 }
