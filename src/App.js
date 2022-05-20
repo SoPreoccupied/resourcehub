@@ -9,6 +9,7 @@ import About from './Components/About.js';
 // import SearchBar from'./Components/SearchBar.js';
 import { useState, useEffect } from "react";
 import {Route, Link, Routes, Navigate} from "react-router-dom";
+import apiKey from './apiKey';
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
 
   //
   useEffect( () => {
-    fetch('https://sheets.googleapis.com/v4/spreadsheets/15fQuHfQCK_u-QWUcyqMSqqOl5p5JBR2C77wbMsC7WPk/values/Sheet1!A:I?key=AIzaSyBVj83yAUwYu60Co4bVIRgZca6lWV5xR2g')
+    fetch(`https://sheets.googleapis.com/v4/spreadsheets/15fQuHfQCK_u-QWUcyqMSqqOl5p5JBR2C77wbMsC7WPk/values/Sheet1!A:I?key=${apiKey}`)
     .then((res) => {
         return res.json();
     })
