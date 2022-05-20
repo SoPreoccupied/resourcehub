@@ -1,8 +1,5 @@
 //This is my contact page and corresponding links
 
-//Do I need react import here?
-import React from 'react';
-
 const Contact = (props) => {
   
     return (

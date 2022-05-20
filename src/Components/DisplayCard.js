@@ -1,7 +1,7 @@
 //This page displays our reasources as cards
 
 import Card from 'react-bootstrap/Card'
-//Do I need bootstrap here?
+
 import Button from 'react-bootstrap/Button';
 
 //Display card with Topic, Description, Website(for now); Indexes 3,4,5(for now) in resourcesListArray
