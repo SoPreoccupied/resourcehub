@@ -6,6 +6,7 @@ import DisplayCard from "./DisplayCard";
 //Map over Topic, Description, Website(for now); Indexes 3,4,5(for now) in resourcesListArray
 const Home = (props) => {
     const displayCardList = props.resourcesListArray.map( (value, index) => {
+        //Skips the first row (template card)
         if(index === 0) {
             return;
         }

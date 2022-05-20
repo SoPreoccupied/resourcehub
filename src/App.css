@@ -79,7 +79,8 @@ h1 {
 }
 
 /* Customize bootstrap cards template */
-.card {
+.card, p {
+  text-align: center;
   background-color: transparent;
   backdrop-filter: blur(5px);
   color: white;
@@ -88,13 +89,7 @@ h1 {
 }
 
 p {
-  text-align: center;
   margin: 25px;
-  color: white;
-  letter-spacing: 2px;
-  text-shadow: 1px 1px #000;
-  background-color: transparent;
-  backdrop-filter: blur(5px);
 }
 
 /* May change later; Styling for SearchBar */
