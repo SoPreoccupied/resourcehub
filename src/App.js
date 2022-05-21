@@ -17,13 +17,27 @@ function App() {
   //Connecting google sheets API data to app.js
   const [resourcesListArray, setResourcesListArray] = useState ([]);
   //Takes indexes from spreadsheet to display the indexes of topic, description, and website text.
-  const [favoritesArraySet, setFavoritesArraySet] = useState (new Set([3, 4, 6]));
+  const [favoritesArraySet, setFavoritesArraySet] = useState (new Set([3, 5, 6]));
 
-  //
+  let localFavoritesArray = [];
+
+  useEffect( () => {
+
+    if (localStorage.getItem("favorites")) {
+      console.log(localStorage.getItem("favorites"));
+      localFavoritesArray = localStorage.getItem("favorites").split(",");
+    }
+  
+    if (localFavoritesArray.length > 0) {
+      setFavoritesArraySet(new Set(localFavoritesArray));
+    }
+
+  }, [])
+  
   useEffect( () => {
     fetch(`https://sheets.googleapis.com/v4/spreadsheets/15fQuHfQCK_u-QWUcyqMSqqOl5p5JBR2C77wbMsC7WPk/values/Sheet1!A:I?key=${apiKey}`)
-    .then((res) => {
-        return res.json();
+    .then((response) => {
+        return response.json();
     })
     .then((data) => {
         setResourcesListArray(data.values)
@@ -31,15 +45,18 @@ function App() {
   },[])
 
   const handleAddFavorite = (favoritesIndex) => {
-    setFavoritesArraySet(new Set([...Array.from(favoritesArraySet), favoritesIndex]));
+    const newFavoritesSet = new Set([...Array.from(favoritesArraySet), favoritesIndex]);
+    localStorage.setItem("favorites", Array.from(newFavoritesSet));
+    setFavoritesArraySet(newFavoritesSet);
   }
 
   const handleRemoveFavorite =(favoritesIndex) => {
-    const newSet = new Set([...Array.from(favoritesArraySet)]);
+    const newFavoritesSet = new Set([...Array.from(favoritesArraySet)]);
     // console.log(newSet);
-    newSet.delete(favoritesIndex);
+    newFavoritesSet.delete(favoritesIndex);
     // console.log(newSet);
-    setFavoritesArraySet(newSet);
+    localStorage.setItem("favorites", Array.from(newFavoritesSet))
+    setFavoritesArraySet(newFavoritesSet);
   }
 
   return (
