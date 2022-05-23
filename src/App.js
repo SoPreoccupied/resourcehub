@@ -2,10 +2,12 @@ import React from "react";
 //Have bootstap before App.css
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import ScrollButton from 'react-scroll-button'
 import Home from './Components/Home.js';
 import Favorites from './Components/Favorites.js';
 import Contact from './Components/Contact.js';
 import About from './Components/About.js';
+
 // import SearchBar from'./Components/SearchBar.js';
 import { useState, useEffect } from "react";
 import {Route, Link, Routes, Navigate} from "react-router-dom";
@@ -60,16 +62,19 @@ function App() {
   }
 
   return (
-    <div className="App">
-
+    <div className="App" id="App">
       <nav>
         <ul>
           <li><Link to='/Home'>Home</Link></li>
           <li><Link to='/Favorites'>Favorites</Link></li>
           <li><Link to='/About'>About</Link></li>
           <li><Link to='/Contact'>Contact</Link></li>
+          <li><button onClick={(event) => {
+              document.getElementById('footer').scrollIntoView();
+          }}>Scroll To Bottom</button></li>
         </ul>
       </nav>
+
       <main>
         <Routes>
           <Route path='/Home' element={<Home addFavorite={handleAddFavorite} resourcesListArray={resourcesListArray}/>} />
@@ -77,9 +82,17 @@ function App() {
           <Route path='/Favorites' element={<Favorites removeFavorite={handleRemoveFavorite} resourcesListArray={resourcesListArray} favoritesArray={Array.from(favoritesArraySet)}/>} />
           <Route path='/Contact' element={<Contact />} />
           <Route path='/About' element={<About />} />
+          <Route path='/resourcehub' element={<Navigate to='/Home' />} />
         </Routes>
       </main>
-      
+      <ScrollButton 
+                targetId='App'
+                behavior={'smooth'} 
+                buttonBackgroundColor={'red'}
+                iconType={'arrow-up'}
+                style= {{fontSize: '24px'}}
+            />
+            <footer id="footer"></footer>
     </div>
   );
 }
