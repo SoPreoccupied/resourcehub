@@ -7,7 +7,6 @@ import Home from './Components/Home.js';
 import Favorites from './Components/Favorites.js';
 import Contact from './Components/Contact.js';
 import About from './Components/About.js';
-
 // import SearchBar from'./Components/SearchBar.js';
 import { useState, useEffect } from "react";
 import {Route, Link, Routes, Navigate} from "react-router-dom";
@@ -50,7 +49,7 @@ function App() {
     const newFavoritesSet = new Set([...Array.from(favoritesArraySet), favoritesIndex]);
     localStorage.setItem("favorites", Array.from(newFavoritesSet));
     setFavoritesArraySet(newFavoritesSet);
-    alert("Added to local Favorites!");
+    alert("Added to your Favorites!");
   }
 
   const handleRemoveFavorite =(favoritesIndex) => {

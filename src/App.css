@@ -35,6 +35,7 @@ ul {
   text-align: center;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 0;
 }
 
 /* Adds space between list items */
@@ -63,13 +64,20 @@ a:hover {
 }
 
 /* Title: Where in the web are our Resources? */
-h1 {
+h1, h2 {
   letter-spacing: 4px;
   font-family: 'Orbitron', sans-serif;
   text-align: center;
   color: rgba(219, 20, 60);
   text-shadow: 1px 1px #000;
   margin: 1em;
+}
+.searchBar {
+  text-align: center;
+  border: 4px, solid #daa520
+}
+#magnifyingGlass {
+  color: 	#daa520;
 }
 /* Gives IDs of cards and favorited cards same flexbox conditions */
 #cards, #favoritedCards {
@@ -101,6 +109,3 @@ h1 {
 p {
   margin: 25px;
 }
-
-
-/* Scroll To Top */
