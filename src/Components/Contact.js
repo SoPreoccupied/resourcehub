@@ -2,7 +2,7 @@
 const Contact = (props) => {
     return (
         <div>
-            <h1>Contact The Creator:</h1>
+            <h1>Contact The Developer:</h1>
             <h2>Gabrielle Walsh</h2>
                 <ul id="contact">
                     <li><a href={'https://www.linkedin.com/in/gabrielle-walsh-se/'} target="_blank">
