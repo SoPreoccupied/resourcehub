@@ -10,11 +10,11 @@ I wholeheartedly want to thank each person who shared these resources to be comp
 
 ## Technologies Used:
 
-*HTML5
-*CSS3
-*JavaScript
-*React
-*Node
+* HTML5
+* CSS3
+* JavaScript
+* React
+* Node
 
 ### What's Next?
 
