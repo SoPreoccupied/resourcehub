@@ -110,3 +110,10 @@ h1, h2 {
 p {
   margin: 25px;
 }
+
+.cartoonPicture {
+  height: 15em;
+  justify-content: center;
+  text-align: center;
+  left: 50%;
+}
