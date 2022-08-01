@@ -48,6 +48,7 @@ const handleSearchUpdate = (event) => {
                     value={currentSearch}
                     onChange={handleSearchUpdate}
                     placeholder="Search"
+                    
                     // onChange={(e) => setName(e.target.value)}
                 />
             </form>

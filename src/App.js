@@ -7,7 +7,7 @@ import Home from './Components/Home.js';
 import Favorites from './Components/Favorites.js';
 import Contact from './Components/Contact.js';
 import About from './Components/About.js';
-// import SearchBar from'./Components/SearchBar.js';
+
 import { useState, useEffect } from "react";
 import {Route, Link, Routes, Navigate} from "react-router-dom";
 import apiKey from './apiKey';
