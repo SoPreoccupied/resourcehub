@@ -1,8 +1,10 @@
 # Description
 
-Life happens, whether circumstances present as big or small, your educational journey can be altered. Such consideration led to the creation of this Resource Hub.
+Hello fellow SEI immersive Students and welcome to our [Resource Hub!](https://sopreoccupied.github.io/Home)
 
-It's purpose is to assist my software engineering community in keeping track of their resources and provide them a way to personalize their learning experience.
+Life happens, whether circumstances present as big or small, your educational journey might need to be rerouted. Such consideration led to the creation of this Resource Hub.
+
+It's purpose is to assist my software engineering community in keeping track of all their resources and provide them a way to personalize their learning experience. 
 
 I wholeheartedly want to thank each person who shared these resources to be compiled. You're awesome and appreciated!
 
