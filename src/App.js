@@ -83,7 +83,7 @@ function App() {
           <Route path='/Favorites' element={<Favorites removeFavorite={handleRemoveFavorite} resourcesListArray={resourcesListArray} favoritesArray={Array.from(favoritesArraySet)}/>} />
           <Route path='/Contact' element={<Contact />} />
           <Route path='/About' element={<About />} />
-          <Route path='/resourcehub' element={<Navigate to='/Home' />} />
+          {/* <Route path='/resourcehub' element={<Navigate to='/Home' />} /> */}
         </Routes>
       </main>
       <ScrollButton 
