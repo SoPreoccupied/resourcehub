@@ -1,6 +1,6 @@
 # Description
 
-Hello fellow SEI immersive Students and welcome to our [Resource Hub!](https://sopreoccupied.github.io/Home)
+Hello fellow SEI Students and welcome to our [Resource Hub!](https://sopreoccupied.github.io/Home)
 
 Life happens, whether circumstances present as big or small, your educational journey might need to be rerouted. Such consideration led to the creation of this Resource Hub.
 
