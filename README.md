@@ -2,7 +2,7 @@
 
 Life happens, whether circumstances present as big or small, your educational journey can be altered. Such consideration led to the creation of this Resource Hub.
 
-It's purpose is to assist my community in keeping track of their resources and provide them a way to personalize their learning experience.
+It's purpose is to assist my software engineering community in keeping track of their resources and provide them a way to personalize their learning experience.
 
 I wholeheartedly want to thank each person who shared these resources to be compiled. You're awesome and appreciated!
 
@@ -12,7 +12,7 @@ I wholeheartedly want to thank each person who shared these resources to be comp
 * CSS3
 * JavaScript
 * React
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+(This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).)
 * Node
 
 ### What's Next?
